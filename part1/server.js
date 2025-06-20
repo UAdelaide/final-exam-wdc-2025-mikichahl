@@ -21,7 +21,7 @@ async function connectDB() {
             `);
             res.json(rows);
         } catch (err) {
-            res.status
+            res.status(500).json({ error: 'failed to retrieve dogs',  })
         }
     })
 

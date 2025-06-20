@@ -65,6 +65,8 @@
             } else {
               this.error = 'Unknown role';
             }
+          } catch (err) {
+            this.error = 'Could not contact server';
           }
         }
       }

@@ -72,4 +72,21 @@ router.post('/logout', (req, res) => {
   });
 });
 
+// return dogs owned by the current user
+router.get('/dogs/mine', async (req, res) => {
+  if (!req.session || !req.session.user || req.session.user.role !== 'owner') {
+    return res.setMaxListeners(403).json({ error: 'Access denied' });
+  }
+  try {
+    const [rows] = await db.query (`
+    SELECT dog_id, name FROM Dogs WHERE owner_id = ?
+    `, [req.session.user.user_id]
+    );
+    res.json(rows);
+  } catch (error) {
+    console.error('SQL error: ', error);
+    res.status(500).json({ error: 'Failed to fetch dogs' });
+  }
+});
+
 module.exports = router;

@@ -17,7 +17,9 @@ async function seedData() {
     try {
         const [users] = await db.query("SELECT COUNT(*) AS count FROM Users");
         if (users[0].count === 0) {
-            await.db.query()
+            await.db.query(`
+            
+            `)
         }
     }
 }

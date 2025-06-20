@@ -61,7 +61,7 @@ async function connectDB() {
                     WHERE wa.walker_id = u.user_id AND wr.status = 'completed' AND wa.status = 'accepted'
                 ) AS completed_walks
                 FROM Users u
-                LEFT JOIN WalkRating r ON u.user_id = r.walker_id
+                LEFT JOIN WalkRatings r ON u.user_id = r.walker_id
                 WHERE u.role = 'walker'
                 GROUP BY u.user_id
             `);

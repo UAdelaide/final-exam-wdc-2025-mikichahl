@@ -29,7 +29,9 @@ router.get('/dogs/mine', async (req, res) => {
     `, [req.session.user.user_id]
     );
     res.json(rows);
-  } catch (err0)
+  } catch (error) {
+    console.error('SQL error: ', error);
+  }
 })
 
 // POST a new walk request (from owner)

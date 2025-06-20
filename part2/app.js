@@ -19,6 +19,8 @@ app.get('/api/dogs', async (req, res) => {
         FROM Dogs d
         `);
         res.json(rows);
+    } catch (err) {
+        res.status(500).json({ error: 'failed to retrieve dogs'})
     }
 })
 

@@ -51,6 +51,8 @@ async function connectDB() {
         try {
             const [rows] = await db.query(`
             SELECT
+                u.username AS walker_username,
+                COUNT(r.rating_id) AS total_ratings
             `)
         }
     })

@@ -15,6 +15,6 @@ async function connectDB() {
 
 async function seedData() {
     try {
-        
+        const [users] = await db.query("SELECT COUNT(*) AS count FROM Users")
     }
 }

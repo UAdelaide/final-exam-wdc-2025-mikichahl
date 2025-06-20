@@ -107,7 +107,10 @@
             )
           );
 
-          this.dogs = dogsList.map
+          this.dogs = dogsList.map((dog, index) => ({
+            ...dog,
+            image: images[index]
+          }))
         }
 
       }

@@ -23,6 +23,11 @@ router.get('/dogs/mine', async (req, res) => {
   if (!req.session || !req.session.user || req.session.user.role !== 'owner') {
     return res.setMaxListeners(403).json({ error: 'Access denied' });
   }
+  try {
+    const [rows] = await db.query (`
+    
+    `)
+  }
 })
 
 // POST a new walk request (from owner)

@@ -7,8 +7,9 @@ const app = express();
 
 app.use(session({
     resave: false,
-    saveUninitialized
-}))
+    saveUninitialized: false,
+    cookie: { secure: false }
+}));
 
 // Middleware
 app.use(express.json());

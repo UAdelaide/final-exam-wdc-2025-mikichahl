@@ -36,7 +36,9 @@ async function connectDB() {
                     wr.duration_minutes,
                     wr.location,
                     u.username AS owner_username
-                FROM
+                FROM WalkRequests wr
+                JOIN DOgs d ON wr.dog_id = d.dog_id
+                JOIN 
             `)
         }
     })

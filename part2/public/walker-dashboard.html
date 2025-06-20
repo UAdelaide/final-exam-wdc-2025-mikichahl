@@ -74,10 +74,18 @@
             message.value = '';
           }
         }
-
+        // logout function
         async function logout() {
-          
+          try {
+            await fetch('/api/users/logout', {
+              method: 'POST'
+            });
+            window.location.href = 'index.html';
+          } catch (err) {
+            error.value = 'Logout failed';
+          }
         }
+
         onMounted(() => {
           loadWalkRequests();
         });

@@ -45,7 +45,7 @@ async function connectDB() {
         } catch (err) {
             res.status(500).json({ error: 'failed to retrieve walk requests', err });
         }
-    })
+    });
 
     app.listen(port, () => {
         console.log(`Server running at http://localhost:${port}`);

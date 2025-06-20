@@ -4,7 +4,7 @@ const session = require('express-session');
 require('dotenv').config();
 
 const app = express();
-//
+// setup express-session to track login state
 app.use(session({
     secret: 'your-secret-key',
     resave: false,

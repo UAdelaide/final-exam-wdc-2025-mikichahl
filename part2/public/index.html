@@ -66,6 +66,28 @@
         this.loadDogs();
       },
       methods: {
+        async loadDogs() {
+          try {
+            const res = await fetch('/api/dogs');
+            const dogList = await res.json();
+
+            const images = await Promise.all (
+              dogList.map(() =>
+              fetch('https://dog.ceo/api/breeds/image/random')
+              .then(res => res.json())
+              .then(data => data.message)
+            )
+          );
+
+          this.dogs = dogsList.map((dog, index) => ({
+            ...dog,
+            image: images[index]
+          }));
+        } catch (err) {
+          console.error('Error fetching dogs/images', err);
+        }
+      };
+
         async login() {
           try {
             const res = await fetch('/api/users/login', {
@@ -92,8 +114,7 @@
             }
           } catch (err) {
             this.error = 'Could not contact server';
-          }
-        };
+          };
     }).mount('#app');
   </script>
 

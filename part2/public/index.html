@@ -102,6 +102,8 @@
             const images = await Promise.all (
               dogList.map(() =>
               fetch('https://dog.ceo/api/breeds/image/random')
+              .then(res => res.json())
+              .then(data => data.message)
             )
           }
         }

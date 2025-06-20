@@ -13,3 +13,8 @@ async function connectDB() {
     console.log('Connected to DB');
 }
 
+async function seedData() {
+    try {
+        
+    }
+}

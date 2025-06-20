@@ -66,6 +66,7 @@
         this.loadDogs(); //load dogs on page load
       },
       methods: {
+        //fetch dog list and random images
         async loadDogs() {
           try {
             const res = await fetch('/api/dogs');
@@ -87,7 +88,7 @@
           console.error('Error fetching dogs/images', err);
         }
       },
-
+        // login function
         async login() {
           try {
             const res = await fetch('/api/users/login', {

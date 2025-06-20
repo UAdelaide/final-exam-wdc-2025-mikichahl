@@ -14,6 +14,7 @@ app.use(session({
     cookie: { secure: false }
 }));
 
+// get all dogs
 app.get('/api/dogs', async (req, res) => {
     try {
         const [rows] = await db.query(`

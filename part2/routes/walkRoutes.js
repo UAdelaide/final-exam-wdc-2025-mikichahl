@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch walk requests' });
   }
 });
-
+// return dogs owned by the current user
 router.get('/dogs/mine', async (req, res) => {
   if (!req.session || !req.session.user || req.session.user.role !== 'owner') {
     return res.setMaxListeners(403).json({ error: 'Access denied' });

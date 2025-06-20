@@ -29,6 +29,7 @@ async function connectDB() {
         console.log(`Server running at http://localhost:${port}`);
     });
 } catch (err) {
-    console.error
+    console.error('MySQL connection failed: ', err);
+}
 }
 

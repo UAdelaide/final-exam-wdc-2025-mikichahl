@@ -100,7 +100,8 @@
             const dogList = await res.json();
 
             const images = await Promise.all (
-              dogList.map())
+              dogList.map(() =>
+              fetch('https://dog.ceo/api/breeds/image/random')
             )
           }
         }

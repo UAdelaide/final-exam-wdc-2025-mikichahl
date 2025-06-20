@@ -16,15 +16,16 @@
     <!--login form username & password-->
     <form @submit.prevent="login">
       <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
+        <label for="username" class="form-label">Username</label> <!--enter username-->
         <input v-model="username" type="text" id="username" class="form-control" required>
       </div>
       <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
+        <label for="password" class="form-label">Password</label> <!--enter password-->
         <input v-model="password" type="password" id="password" class="form-control" required>
       </div>
       <button type="submit" class="btn btn-primary w-100">Login</button>
     </form>
+    
     <h2 class="mt-5">All Registered Dogs</h2>
   <table class="table table-striped">
     <thead>

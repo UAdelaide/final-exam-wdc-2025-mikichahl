@@ -5,5 +5,8 @@ const port = 8080;
 
 let db;
 async function connectDB() {
-    db = await mysql.
+    db = await mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+    })
 }

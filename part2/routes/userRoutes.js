@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 
 roouter.get('/', async (req, res) => {
   try {
-    const [rows] = await db.query('SELECT user_id')
+    const [rows] = await db.query('SELECT user_id, username, email, role FROM Users')
   }
 })
 

@@ -43,7 +43,7 @@ async function connectDB() {
             `);
             res.json(rows);
         } catch (err) {
-            
+            res.status(500).json({ error: 'failed to retrieve walk requests', err });
         }
     })
 

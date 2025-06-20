@@ -38,7 +38,8 @@ async function connectDB() {
                     u.username AS owner_username
                 FROM WalkRequests wr
                 JOIN DOgs d ON wr.dog_id = d.dog_id
-                JOIN 
+                JOIN Users u ON d.owner_id = u.user_id
+                WHERE wr.status = 'open'
             `)
         }
     })

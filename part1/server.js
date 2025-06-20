@@ -54,6 +54,11 @@ async function connectDB() {
                 u.username AS walker_username,
                 COUNT(r.rating_id) AS total_ratings,
                 ROUND(AVG(r.rating), 1) AS average_rating,
+                (
+                    SELECT COUNT(*)
+                    FROM WalkRequests wr
+                    
+                )
             `)
         }
     })

@@ -14,7 +14,7 @@ app.use(session({
 
 app.get('/api/dogs', async (req, res) => {
     try {
-        const [rows] = await deb.query(`
+        const [rows] = await db.query(`
         SELECT d.dog_id, d.name, d.size, d.owner_id
         FROM Dogs d
         `);

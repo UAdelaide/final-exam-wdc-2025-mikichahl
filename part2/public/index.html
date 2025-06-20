@@ -110,7 +110,9 @@
           this.dogs = dogsList.map((dog, index) => ({
             ...dog,
             image: images[index]
-          }))
+          }));
+        } catch (err) {
+          console.error('Error fetching dogs/images', err)
         }
 
       }

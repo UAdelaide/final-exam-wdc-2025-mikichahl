@@ -19,7 +19,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/dogs/mine', async)
+router.get('/dogs/mine', async (req, res) => {
+  if (!req.session || !req.session.user || req.ess)
+})
 
 // POST a new walk request (from owner)
 router.post('/', async (req, res) => {

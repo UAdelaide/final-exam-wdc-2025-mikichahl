@@ -47,6 +47,8 @@ async function connectDB() {
         }
     });
 
+    app.get('/api/walkers/summary', async)
+
     app.listen(port, () => {
         console.log(`Server running at http://localhost:${port}`);
     });

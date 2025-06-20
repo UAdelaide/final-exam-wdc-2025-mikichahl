@@ -31,8 +31,9 @@ router.get('/dogs/mine', async (req, res) => {
     res.json(rows);
   } catch (error) {
     console.error('SQL error: ', error);
+    res.status(500).json({ error: 'Failed to fetch dogs' });
   }
-})
+});
 
 // POST a new walk request (from owner)
 router.post('/', async (req, res) => {

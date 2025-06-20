@@ -15,7 +15,7 @@ app.use(session({
 app.get('/api/dogs', async (req, res) => {
     try {
         const [rows] = await debug.query(`
-        
+        SELECT d.dog_id, d.name, d.size, d.owner
         `)
     }
 })

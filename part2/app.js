@@ -12,6 +12,8 @@ app.use(session({
     cookie: { secure: false }
 }));
 
+app.get
+
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));

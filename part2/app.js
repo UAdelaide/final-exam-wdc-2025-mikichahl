@@ -20,9 +20,9 @@ app.get('/api/dogs', async (req, res) => {
         `);
         res.json(rows);
     } catch (err) {
-        res.status(500).json({ error: 'failed to retrieve dogs'})
+        res.status(500).json({ error: 'failed to retrieve dogs', err });
     }
-})
+});
 
 // Middleware
 app.use(express.json());

@@ -1,10 +1,9 @@
 const express = require('express');
 const path = require('path');
-const mysql =  require('mysql2/promise');
 const session = require('express-session');
 require('dotenv').config();
 
-const db = require('./models/db'); 
+const db = require('./models/db');
 
 const app = express();
 // setup express-session to track login state

@@ -20,7 +20,9 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/dogs/mine', async (req, res) => {
-  if (!req.session || !req.session.user || req.ess)
+  if (!req.session || !req.session.user || req.session.user.role !== 'owner') {
+    return res.setMaxListeners(403)
+  }
 })
 
 // POST a new walk request (from owner)

@@ -30,6 +30,10 @@ async function connectDB() {
         try {
             const [rows] = await db.query(`
                 SELECT
+                    wr.request_id,
+                    d.name AS dog_name,
+                    wr.requested_time,
+                    wr.
             `)
         }
     })

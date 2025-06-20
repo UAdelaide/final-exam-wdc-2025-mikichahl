@@ -63,7 +63,11 @@ async function connectDB() {
                 FROM Users u
                 LEFT JOIN WalkRating r ON u.user_id = r.walker_id
                 WHERE u.role = 'walker'
-            `)
+                GROUP BY u.user_id
+            `);
+            res.json(rows);
+        } catch (err) {
+            
         }
     })
 

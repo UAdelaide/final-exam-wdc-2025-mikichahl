@@ -12,7 +12,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-roouter.get('/')
+roouter.get('/', async (req, res) => {
+  
+})
 
 // POST a new user (simple signup)
 router.post('/register', async (req, res) => {

@@ -30,18 +30,20 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Photo</th>
+
         <th>Name</th>
         <th>Size</th>
         <th>Owner</th>
+        <th>Photo</th>
       </tr>
     </thead>
     <tbody>
       <tr v-for="dog in dogs" :key="dog.dog_name">
-        
+        <td></td>
         <td>{{ dog.dog_name }}</td>
         <td>{{ dog.size }}</td>
         <td>{{ dog.owner_id }}</td>
+        <td><img :src="dog.image" alt="dog image"></td>
       </tr>
     </tbody>
     </table>

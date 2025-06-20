@@ -46,7 +46,7 @@ router.post('/:id/apply', async (req, res) => {
       INSERT INTO WalkApplications (request_id, walker_id)
       VALUES (?, ?)
     `, [requestId, walker_id]);
-
+    
     await db.query(`
       UPDATE WalkRequests
       SET status = 'accepted'

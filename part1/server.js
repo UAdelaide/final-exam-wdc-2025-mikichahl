@@ -47,7 +47,13 @@ async function connectDB() {
         }
     });
 
-    app.get('/api/walkers/summary', async)
+    app.get('/api/walkers/summary', async (req, res) => {
+        try {
+            const [rows] = await db.query(`
+            SELECT
+            `)
+        }
+    })
 
     app.listen(port, () => {
         console.log(`Server running at http://localhost:${port}`);

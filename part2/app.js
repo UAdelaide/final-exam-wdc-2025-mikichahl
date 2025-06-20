@@ -14,7 +14,9 @@ app.use(session({
 
 app.get('/api/dogs', async (req, res) => {
     try {
-        const [row]
+        const [rows] = await debug.query(`
+        
+        `)
     }
 })
 

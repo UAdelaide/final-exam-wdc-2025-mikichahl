@@ -57,6 +57,10 @@
         }
 
         async function applyToWalk(requestId) {
+          if (!currentUser.value) {
+            error.value = 'User info not loaded';
+            return;
+          }
           
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {

@@ -62,6 +62,9 @@
           dogs: []
         };
       },
+      mounted() {
+        this.loadDogs();
+      }
       methods: {
         async login() {
           try {

@@ -12,7 +12,11 @@ app.use(session({
     cookie: { secure: false }
 }));
 
-app.get
+app.get('/api/dogs', async (req, res) => {
+    try {
+        const [row]
+    }
+})
 
 // Middleware
 app.use(express.json());

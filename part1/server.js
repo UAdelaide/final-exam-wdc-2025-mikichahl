@@ -11,5 +11,9 @@ async function connectDB() {
         database: 'DogWalkService'
     });
     console.log('Connected to DB');
+
+    app.get('/api/dogs')
+
+
 }
 

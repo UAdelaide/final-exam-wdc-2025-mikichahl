@@ -31,5 +31,5 @@ async function connectDB() {
 } catch (err) {
     console.error('MySQL connection failed: ', err);
 }
-}
+
 

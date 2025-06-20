@@ -61,7 +61,7 @@
             // redirect to either owner or walker dashboard
             if (data.user.role === 'owner') {
               window.location.href = 'owner-dashboard.html';
-            } else if (data.role === 'walker') {
+            } else if (data.user.role === 'walker') {
               window.location.href = 'walker-dashboard.html';
             } else {
               this.error = 'Unknown role';

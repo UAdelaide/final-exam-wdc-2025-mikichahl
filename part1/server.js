@@ -8,5 +8,8 @@ async function connectDB() {
     db = await mysql.createConnection({
         host: 'localhost',
         user: 'root',
-    })
+        database: 'DogWalkService'
+    });
+    console.log('Connected to DB');
 }
+

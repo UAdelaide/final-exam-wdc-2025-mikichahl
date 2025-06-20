@@ -12,7 +12,13 @@ async function connectDB() {
     });
     console.log('Connected to DB');
 
-    app.get('/api/dogs')
+    app.get('/api/dogs', async (req, res) => {
+        try {
+            const [rows] = await db.query(`
+            
+            `)
+        }
+    })
 
 
 }

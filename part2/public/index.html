@@ -86,7 +86,7 @@
         } catch (err) {
           console.error('Error fetching dogs/images', err);
         }
-      };
+      },
 
         async login() {
           try {
@@ -115,6 +115,7 @@
           } catch (err) {
             this.error = 'Could not contact server';
           };
+        },
     }).mount('#app');
   </script>
 

@@ -58,7 +58,7 @@ async function connectDB() {
                     SELECT COUNT(*)
                     FROM WalkRequests wr
                     JOIN WalkApplications wa ON wr.request_id = wa.request_id
-                    WHERE wa.walker_id
+                    WHERE wa.walker_id = u.user_d
                 )
             `)
         }

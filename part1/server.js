@@ -69,7 +69,7 @@ async function connectDB() {
         } catch (err) {
             res.status(500).json({ error: 'Failed to retrieve walker summary', err });
         }
-    })
+    });
 
     app.listen(port, () => {
         console.log(`Server running at http://localhost:${port}`);

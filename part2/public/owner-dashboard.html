@@ -9,8 +9,8 @@
 </head>
 <body class="bg-light">
   <div id="app" class="container py-4">
-    <h1 class="mb-4 text-primary">Owner Dashboard</h1> <!--add -->
-    <button type = submit @click = "logout" class="btn btn-danger">Logout</button>
+    <h1 class="mb-4 text-primary">Owner Dashboard</h1>
+    <button type = submit @click = "logout" class="btn btn-danger">Logout</button> <!--add logout button-->
     <!-- Walk request form -->
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
@@ -114,7 +114,7 @@
             message.value = '';
           }
         }
-        // logout function
+        <!--logout function
         async function logout() {
           try {
             await fetch('/api/users/logout', {
